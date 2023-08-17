@@ -1,0 +1,9 @@
+<p>listado works!</p>
+
+<p>Listado de Heroes</p>
+<p *ngIf="heroeEliminado; else noEliminado">Heroe eliminado {{ heroeEliminado }}</p>
+<ng-template #noEliminado>No ha eliminado nada</ng-template>
+<ul>
+    <li *ngFor="let heroe of heroes">{{ heroe }}</li>
+</ul>
+<button (click)="eliminarHeroe()">Eliminar</button>
